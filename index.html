@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2&family=Festive&display=swap" rel="stylesheet">
+  <title>js intro</title>
+  <style>
+    * {
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      font-family: 'Baloo Bhaina 2', cursive;
+      font-family: 'Festive', cursive;
+      font-size: 54px;
+      font-weight: inherit;
+      letter-spacing: 3px;
+      color: white;
+      background-color: black;
+    }
+
+    h1 {
+      text-align: center;
+
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      flex-direction: column;
+      margin: 120px 3px;
+
+    }
+
+    .nav {
+      position: absolute;
+
+    }
+
+    .nav::before {
+      content: " ";
+      position: absolute;
+      z-index: -1;
+      width: 94em;
+      height: 45em;
+      /* background: url(https://source.unsplash.com/random) no-repeat center center/cover; */
+      opacity: 0.6;
+      top: 0px;
+      left: 0px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="nav"></div>
+  <div class="container">
+    <h1> YOUR TIME IS</h1>
+    <h1 id="hd"></h1>
+  </div>
+  <!-- <h1 class="mainheading">another one</h1>
+<h2> default</h2> -->
+  <script>
+    // variables
+    // var a=34;   //global declaration
+    // var c="gdggof,gld,s";
+    {
+      let a = "f";
+      //   we generally use let 
+    }
+    //  var a= alert("bhai");
+    //   var b= prompt("do you want to continue");
+    // console.log(a,b,c);
+    //  var c= confirm("do you want it")
+
+    // var a="asdfghjkl";
+
+
+
+
+    {// // loop types
+      //   var array=[ 2,5,"ddkf",3443.5565,"fdfgd"];
+      // for (let index = 0; index < array.length; index++) {
+      //   const element = array[index];
+      //   console.log(element ,1);
+      // }
+      // for (const key in array) {
+      //   if (array.hasOwnProperty.call( array, key)) {
+      //     const element =  array[key];
+      //     console.log(element,2);
+      //   }
+      // }
+      // array.forEach(function f(element){
+      //   console.log(element,3);
+      // });
+      // for (const iterator of  array) {
+      //   console.log(iterator,4);
+      // }
+      // array.forEach(element => {
+      //   console.log(element,5);
+      // });
+
+    }
+    // acessing dom
+    //  var main= document.getElementById("main");
+    //  console.log(main);
+    //  var err= document.getElementsByClassName("mainheading");
+    //  console.log(err[0]);
+    //  var bbb= document.getElementsByTagName("h2");
+    //  console.log(bbb[1]);
+
+
+    function display() {
+      time = new Date();
+      hh = new Date().getHours();
+      mm = new Date().getMinutes();
+      ss = new Date().getSeconds();
+      // heading.innerHTML=`the time rn is ${hh}: ${mm} :${ss}`;
+      var heading = document.getElementById("hd").innerHTML = time;
+    }
+    setInterval(display, 1000);
+
+
+
+  </script>
+</body>
+
+</html>
